@@ -1,0 +1,14 @@
+{
+    "version": 3,
+    "file": "companies.css?__=1556961448738",
+    "sources": [
+        "/assets/css/companies.scss",
+        "/assets/css/module/_vars.scss"
+    ],
+    "sourcesContent": [
+        "@import './module/vars';\r\n\r\n.divDesignerCard {\r\n\t&:hover {\r\n        background-color: $yellow;\r\n        text-decoration: none;\r\n        \r\n        * {\r\n            color: #fff;\r\n        }\r\n    }\r\n\r\n    h4 {\r\n        color: $yellow;\r\n    }\r\n\r\n    div{\r\n        color:$dark;\r\n    }\r\n}\r\n",
+        "$xl-page-width: 1460px;\r\n$lg-page-width: 1220px;\r\n$md-page-width: 100vw;\r\n\r\n$breakpoint-xs: 0;\r\n$breakpoint-sm: 576px;\r\n$breakpoint-md: 768px;\r\n$breakpoint-lg: 992px;\r\n$breakpoint-xl: 1460px;\r\n\r\n$black: #222;\r\n$blue: #007bff;\r\n$indigo: #6610f2;\r\n$purple: #6f42c1;\r\n$pink: #e83e8c;\r\n$red: #dc3545;\r\n$orange: #fd7e14;\r\n$yellow: #ffc107;\r\n$green: #28a745;\r\n$teal: #20c997;\r\n$cyan: #17a2b8;\r\n$white: #fff;\r\n$gray: #6c757d;\r\n$gray-dark: #343a40;\r\n$brown: #774e09;\r\n\r\n\r\n$primary: #007bff;\r\n$secondary: #54656d;\r\n$secondary-light: #73858d;\r\n\r\n\r\n$success: #28a745;\r\n$info: #17a2b8;\r\n$warning: #ffc107;\r\n$danger: #dc3545;\r\n\r\n\r\n$light: #ececec;\r\n$dark: #343a40;\r\n"
+    ],
+    "names": [],
+    "mappings": "AAEA,AACC,gBADe,AACd,MAAM,CAAC,EACD,gBAAgB,ECaf,OAAO,EDZR,eAAe,EAAE,IAAI,GAKxB;;AARL,AAKQ,gBALQ,AACd,MAAM,CAIA,CAAC,CAAC,EACE,KAAK,EAAE,IAAI,GACd;;AAPT,AAUI,gBAVY,CAUZ,EAAE,CAAC,EACC,KAAK,ECIJ,OAAO,GDHX;;AAZL,AAcI,gBAdY,CAcZ,GAAG,CAAA,EACC,KAAK,ECsBN,OAAO,GDrBT"
+}

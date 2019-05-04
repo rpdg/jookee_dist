@@ -1,0 +1,23 @@
+.home-banner { width: 100%; }
+
+.btnBest4U { max-width: 160px; }
+
+.mxw-350 { max-width: 350px; }
+
+.frd-link-logo { border: 1px solid #ddd; padding: 10px; margin: 20px 0; width: 110px; height: 110px; }
+
+#allBd { display: table; background-color: #fff; overflow-y: auto; height: 100%; width: 100%; }
+
+#allBd > .tr > .td:nth-of-type(1) { width: 100px; vertical-align: middle; text-align: center; font-weight: bold; }
+
+#allBd > .tr:nth-of-type(1) > .td:nth-of-type(1) { background-color: #54656d; color: #fff; }
+
+.spQ { display: inline-block; width: 100px; text-align: center; white-space: nowrap; text-overflow: ellipsis; cursor: pointer; }
+
+.tdGray { width: 100px; vertical-align: middle; text-align: center; font-weight: bold; background-color: #ebebeb; color: #666; }
+
+.carousel-inner img { width: 100%; height: 100%; }
+
+.page-foot b { display: inline-block; height: 2em; font-size: 14px; line-height: 2em; border-bottom: 2px solid #54656d; }
+
+/*# sourceMappingURL=index.css.map?__=1556961448738 */

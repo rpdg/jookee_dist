@@ -1,0 +1,361 @@
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" />
+		
+		<title>巧客网</title>
+		
+
+		    <link rel="stylesheet" href="/assets/css/fontawesome.css?__=1556961448738" />
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?__=1556961448738" />
+    <link rel="stylesheet" href="/assets/css/app.css?__=674f9a6" />
+    <link rel="stylesheet" href="/assets/css/swiper.min.css?__=1556961448738" />
+    <style>
+		.lunchbox {
+			position: relative;
+		}
+
+		@media (min-width: 37.5em) {
+			.lunchbox {
+				margin-left: auto;
+				margin-right: auto;
+				width: 92%;
+
+				/* make room for arrows */
+				padding-left: 3em;
+				padding-right: 3em;
+			}
+		}
+
+		@media (min-width: 43.75em) {
+			.lunchbox {
+				width: 99%;
+			}
+		}
+
+		.swiper-button-prev,.swiper-button-next {
+			display: none;
+		}
+		@media (min-width: 37.5em) {
+			.swiper-button-prev,.swiper-button-next {
+				/* show on larger viewports */
+				display: block;
+			}
+		}
+		.swiper-container {
+			width: 100%;
+			height: 100%;
+		}
+		.swiper-slide {
+			overflow: hidden;
+			text-align: center;
+			font-size: 18px;
+			background: #fff;
+
+			/* Center slide text vertically */
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			-webkit-align-items: center;
+			align-items: center;
+		}
+		
+		.border-5{
+			border-style: solid;
+			border-width: 5px;
+			border-color: transparent;
+		}
+	</style>
+		
+		
+	</head>
+	<body>
+		<!-- header -->
+		<nav id="mainNav" class="container navbar navbar-expand-lg navbar-light mb-3">
+			<a class="navbar-brand" href="/"><img src="/assets/img/logo_jookee.png?__=33beefb"/></a>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="/">首页</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="/companies/index.html">装修公司</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="/decoration/index.html">软装设计</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="/cases/index.html">经典案例</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="/materials/index.html">会员特惠建材</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="/user/vip.html">会员服务</a>
+					</li>
+				</ul>
+				<form id="pageHeaderSearchForm" class="form-inline my-2 my-lg-0">
+					<div class="input-group">
+						<input id="site_search_k" type="text" class="form-control" placeholder="输入小区名" />
+						<div class="input-group-append">
+							<span id="btnSearch" class="input-group-text">
+								<i class="fas fa-search"></i>
+							</span>
+						</div>
+						<div id="userState" class="btn-group ml-2">
+							<button type="button" data-href="/user/signin.html" class="btn btn-sm btn-secondary">登录</button>
+							<button type="button" data-href="/user/signup.html" class="btn btn-sm">注册</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</nav>
+<div class="container">
+	
+	
+		<div class="row mb-2">
+			<div class="col-4 col-lg-8 text-gray">
+				经典案例 > 小户型 > <span class="font-12">保罗·滨江</span>	
+			</div>
+			<a href="javascript:z(1 , 'case' , '#dzSp_1')>" class="col-2 col-lg-1 text-danger text-right">
+				<i class="fas fa-thumbs-up"></i> 8
+			</a>
+			<div class="col-4 col-lg-3 text-gray font-12">
+				136m² / 3室2厅2卫 / 新古典 / 全包
+				<span class="float-right">31.5万</span>
+			</div>
+		</div>
+	
+
+
+	
+		<div class="row">
+			<div class="col-12 col-lg-9 mb-3 mb-lg-0">
+				<img id="view_full" src="http://www.jookee.cn/upload/image/20190417/29ee1285-86f5-48b3-9d2f-996bdb8b806f.jpg" class="img-fluid img-fit" />
+			</div>
+			<div class="col-12 col-lg-3 bg-secondary">
+				<div class="d-block text-center p-5">
+					<h6 class="text-white font-weight-light">DESIGN COMPANY</h6>
+					<h5 class="text-white font-weight-light">设计公司</h5>
+					<img src="http://www.jookee.cn/upload/image/20160418/da03ae89-d7a6-45f2-8319-6527d22ef301.jpg" class="img-fluid my-3" />
+					<a class="text-white" href="/companies/home.html?cid=<%=contractor_id%>"><h3>C+创意空间</h3></a>
+					<a class="text-white font-12" href="/companies/home.html?cid=<%=contractor_id%>">查看设计公司 > </a>
+				</div>
+			</div>
+		</div>
+	
+	
+
+	<!-- thumbs -->
+	
+	<div class="row px-3">
+		<div class="lunchbox my-3">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					
+						<div class="swiper-slide">
+							<img src="http://www.jookee.cn/upload/image/20190417/29ee1285-86f5-48b3-9d2f-996bdb8b806f.jpg" class="thumb-hlr img-fluid border-5 border-warning" />
+						</div>
+						<div class="swiper-slide">
+							<img src="http://placehold.it/150x80" class="thumb-hlr img-fluid border-5" />
+						</div>
+						<div class="swiper-slide">
+							<img src="http://placehold.it/150x80" class="thumb-hlr img-fluid border-5" />
+						</div>
+						<div class="swiper-slide">
+							<img src="http://placehold.it/150x80" class="thumb-hlr img-fluid border-5" />
+						</div>
+						<div class="swiper-slide">
+							<img src="http://placehold.it/150x80" class="thumb-hlr img-fluid border-5" />
+						</div>
+						<div class="swiper-slide">
+							<img src="http://placehold.it/150x80" class="thumb-hlr img-fluid border-5" />
+						</div>
+						<div class="swiper-slide">
+							<img src="http://placehold.it/150x80" class="thumb-hlr img-fluid border-5" />
+						</div>
+					
+				</div>
+			</div>
+			<!-- Add Arrows -->
+			<div class="swiper-button-next swiper-button-black"></div>
+			<div class="swiper-button-prev swiper-button-black"></div>
+		</div>
+	</div>
+</div>
+
+<!-- 经典案例 -->
+<div class="container py-5">
+	<div class="text-center mb-3">
+		<img src="/assets/img/case-a01.png?__=8e9f021" class="img-fluid" />
+	</div>
+	<div class="row">
+		<!-- 案例x3 -->
+		
+			<div class="col-12 col-lg-4 my-3">
+	<a href="/cases/detail.html">
+		<img src="http://placehold.it/360x240" class="img-fluid" alt="Responsive image" />
+		<p class="subTitle text-center text-nowrap">大同花苑</p>
+	</a>
+	<span>现代简约<span class="float-right font-12">20万</span></span>
+	<div class="font-12"> 130m² / 三居室 / 现代 / 全包 </div>
+</div>
+
+			<div class="col-12 col-lg-4 my-3">
+	<a href="/cases/detail.html">
+		<img src="http://placehold.it/360x240" class="img-fluid" alt="Responsive image" />
+		<p class="subTitle text-center text-nowrap">大同花苑</p>
+	</a>
+	<span>现代简约<span class="float-right font-12">20万</span></span>
+	<div class="font-12"> 130m² / 三居室 / 现代 / 全包 </div>
+</div>
+
+			<div class="col-12 col-lg-4 my-3">
+	<a href="/cases/detail.html">
+		<img src="http://placehold.it/360x240" class="img-fluid" alt="Responsive image" />
+		<p class="subTitle text-center text-nowrap">大同花苑</p>
+	</a>
+	<span>现代简约<span class="float-right font-12">20万</span></span>
+	<div class="font-12"> 130m² / 三居室 / 现代 / 全包 </div>
+</div>
+
+			<div class="col-12 col-lg-4 my-3">
+	<a href="/cases/detail.html">
+		<img src="http://placehold.it/360x240" class="img-fluid" alt="Responsive image" />
+		<p class="subTitle text-center text-nowrap">大同花苑</p>
+	</a>
+	<span>现代简约<span class="float-right font-12">20万</span></span>
+	<div class="font-12"> 130m² / 三居室 / 现代 / 全包 </div>
+</div>
+
+		
+		
+	</div>
+</div>
+
+
+
+		
+		<div class="container my-5">
+			<div class="page-foot m-3">
+				<div class="row justify-content-center">
+					<div class="col-6 col-md-4 col-lg-2 border border-top-0 border-bottom-0 border-left-0">
+						<b>关于巧客</b>
+						<ul class="p-3">
+							<li><a href="#">巧客新闻</a></li>
+							<li><a href="#">巧客网责任</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-4 col-lg-2 border border-top-0 border-bottom-0 border-left-0">
+						<b>加入巧客网</b>
+						<ul class="p-3">
+							<li><a href="#">巧客网活动</a></li>
+							<li><a href="#">巧客网用户</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-4 col-lg-2 border border-top-0 border-bottom-0 border-left-0">
+						<b>帮助中心</b>
+						<ul class="p-3">
+							<li><a href="#">常见问题</a></li>
+							<li><a href="#">联系我们</a></li>
+							<li><a href="#">在线留言</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-4 col-lg-2 border border-top-0 border-bottom-0 border-left-0">
+						<b>法律法规</b>
+						<ul class="p-3">
+							<li><a href="#">免责条款</a></li>
+							<li><a href="#">用户协议</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-4 col-lg-2">
+						<b>展会指南</b>
+						<ul class="p-3">
+							<li><a href="#">家居展览</a></li>
+							<li><a href="#">设计沙龙</a></li>
+							<li><a href="#">商家活动</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- QR_code -->
+		<div class="text-center mb-5">
+			<img src="/assets/img/qr.jpg?__=007e940" alt="" />
+		</div>
+		
+
+		<script src="userState.js.ashx"></script>
+		<script src="/assets/js/jquery-3.4.0.min.js?__=1556961448738"></script>
+		<script src="/assets/js/bootstrap.min.js?__=1556961448738"></script>
+
+		<script src="/assets/js/swiper.min.js?__=1556961448738"></script>
+<script>
+		var swiper = new Swiper('.swiper-container', {
+			slidesPerView: 6,
+			spaceBetween: 20,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
+			breakpoints: {
+				768: {
+					slidesPerView: 4,
+					spaceBetween: 30
+				},
+				640: {
+					slidesPerView: 2,
+					spaceBetween: 20
+				},
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 10
+				}
+			}
+		});
+	
+
+var imgs = $('#lunchbox').on('click' , '.thumb-hlr' , function(){
+		$('#view_full').attr('src' , this.src) ;
+		imgs.removeClass('border-warning');
+		$(this).addClass('border-warning');
+});
+imgs.eq(0).click();
+
+function z(id, type, elemId) {
+        $.get('z.ashx?id=' + id + '&type=' + type, function () {
+            var sp = $(elemId);
+            sp.text(parseInt(sp.text(), 10) + 1);
+        });
+	}
+	
+
+
+		$('#pageHeaderSearchForm').on('click' , 'button' , function(){
+			location.assign(this.getAttribute('data-href'));
+		});
+		$('#btnSearch').click(function (){
+			var kw = $('#site_search_k').val();
+			location.href='/cases/index.html?building_kw='+kw ;
+		});
+		</script>
+	<script type="text/javascript" charset="utf-8" src="http://192.168.1.6:8132/livereload.js"></script></body>
+</html>

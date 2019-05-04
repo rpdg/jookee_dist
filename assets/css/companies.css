@@ -1,0 +1,9 @@
+.divDesignerCard:hover { background-color: #ffc107; text-decoration: none; }
+
+.divDesignerCard:hover * { color: #fff; }
+
+.divDesignerCard h4 { color: #ffc107; }
+
+.divDesignerCard div { color: #343a40; }
+
+/*# sourceMappingURL=companies.css.map?__=1556961448738 */

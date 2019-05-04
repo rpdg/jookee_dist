@@ -1,0 +1,161 @@
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" />
+		
+		<title>巧客网</title>
+		
+
+		    <link rel="stylesheet" href="/assets/css/fontawesome.css?__=1556961448738" />
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?__=1556961448738" />
+    <link rel="stylesheet" href="/assets/css/app.css?__=674f9a6" />
+    <style>
+	#divMain {
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		background-image: url('/assets/img/bg-reg.jpg?__=daa0bef');
+		height: 500px;
+	}
+
+	#loginForm {
+		background-color: #a8a8ab;
+	}
+</style>
+		
+		
+	</head>
+	<body>
+		<!-- header -->
+		<nav id="mainNav" class="container navbar navbar-expand-lg navbar-light mb-3">
+			<a class="navbar-brand" href="/"><img src="/assets/img/logo_jookee.png?__=33beefb"/></a>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="/">首页</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="/companies/index.html">装修公司</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="/decoration/index.html">软装设计</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="/cases/index.html">经典案例</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="/materials/index.html">会员特惠建材</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="/user/vip.html">会员服务</a>
+					</li>
+				</ul>
+				<form id="pageHeaderSearchForm" class="form-inline my-2 my-lg-0">
+					<div class="input-group">
+						<input id="site_search_k" type="text" class="form-control" placeholder="输入小区名" />
+						<div class="input-group-append">
+							<span id="btnSearch" class="input-group-text">
+								<i class="fas fa-search"></i>
+							</span>
+						</div>
+						<div id="userState" class="btn-group ml-2">
+							<button type="button" data-href="/user/signin.html" class="btn btn-sm btn-secondary">登录</button>
+							<button type="button" data-href="/user/signup.html" class="btn btn-sm">注册</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</nav>
+
+		
+
+<div id="divMain">
+	<div class="container">
+		<div class="row py-5 justify-content-end">
+			<div class="col-12 col-lg-4 float-right">
+				<form id="loginForm" class="p-4" method="post" runat="server">
+					<div class="form-row">
+						<div class="input-group mb-2">
+							<div class="input-group-prepend">
+								<div class="input-group-text">用户名</div>
+							</div>
+							<input type="text" class="form-control" id="ipt_name" name="name" maxlength="20"
+							required
+							pattern="^[a-zA-Z][a-zA-Z0-9_]{5,19}$" />
+						</div>
+						<div class="input-group mb-2">
+							<div class="input-group-prepend">
+								<div class="input-group-text">密　码</div>
+							</div>
+							<input id="ipt_pswd" name="pwd" type="password" class="form-control"
+							minlength="6"
+							maxlength="20"
+							required />
+						</div>
+						<div class="input-group mb-2">
+							<div class="input-group-prepend">
+								<div class="input-group-text">站　点</div>
+							</div>
+							<select class="form-control">
+								<option value="">上海</option>
+							</select>
+						</div>
+						<div class="input-group mb-2">
+							<button class="form-control btn btn-warning px-5 text-white">登录</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		
+
+		<script src="userState.js.ashx"></script>
+		<script src="/assets/js/jquery-3.4.0.min.js?__=1556961448738"></script>
+		<script src="/assets/js/bootstrap.min.js?__=1556961448738"></script>
+
+		<script>
+	
+	var form = document.getElementById('loginForm');
+
+	form.addEventListener(
+		'submit',
+		function(event) {
+			event.preventDefault();
+			event.stopPropagation();
+
+			if (form.checkValidity()) {
+				var obj = {
+					name: $('#ipt_name').val(),
+					pwd: $('#ipt_pswd').val()
+				};
+				form.submit();
+			}
+		},
+		false
+	);
+
+
+		$('#pageHeaderSearchForm').on('click' , 'button' , function(){
+			location.assign(this.getAttribute('data-href'));
+		});
+		$('#btnSearch').click(function (){
+			var kw = $('#site_search_k').val();
+			location.href='/cases/index.html?building_kw='+kw ;
+		});
+		</script>
+	<script type="text/javascript" charset="utf-8" src="http://192.168.1.6:8132/livereload.js"></script></body>
+</html>

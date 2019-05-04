@@ -1,0 +1,318 @@
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" />
+		
+		<title>巧客网</title>
+		
+
+		    <link rel="stylesheet" href="/assets/css/fontawesome.css?__=1556961448738" />
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?__=1556961448738" />
+    <link rel="stylesheet" href="/assets/css/app.css?__=674f9a6" />
+    <link rel="stylesheet" href="/assets/css/swiper.min.css?__=1556961448738" />
+    <style>
+	.swiper-container {
+		width: 100%;
+		height: 100%;
+	}
+	.swiper-slide {
+		overflow: hidden;
+		text-align: center;
+		font-size: 18px;
+		background: #fff;
+
+		/* Center slide text vertically */
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		-webkit-justify-content: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
+		align-items: center;
+	}
+
+	.msTab {
+		display: inline-block;
+		padding: 5px;
+		margin: 0 8px;
+		font-size: 20px;
+		cursor: pointer;
+	}
+	.msTab:hover,
+	.msTab.active {
+		color: #ffc107;
+		text-decoration: underline;
+	}
+</style>
+		
+		
+	</head>
+	<body>
+		<!-- header -->
+		<nav id="mainNav" class="container navbar navbar-expand-lg navbar-light mb-3">
+			<a class="navbar-brand" href="/"><img src="/assets/img/logo_jookee.png?__=33beefb"/></a>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="/">首页</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="/companies/index.html">装修公司</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="/decoration/index.html">软装设计</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="/cases/index.html">经典案例</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="/materials/index.html">会员特惠建材</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="/user/vip.html">会员服务</a>
+					</li>
+				</ul>
+				<form id="pageHeaderSearchForm" class="form-inline my-2 my-lg-0">
+					<div class="input-group">
+						<input id="site_search_k" type="text" class="form-control" placeholder="输入小区名" />
+						<div class="input-group-append">
+							<span id="btnSearch" class="input-group-text">
+								<i class="fas fa-search"></i>
+							</span>
+						</div>
+						<div id="userState" class="btn-group ml-2">
+							<button type="button" data-href="/user/signin.html" class="btn btn-sm btn-secondary">登录</button>
+							<button type="button" data-href="/user/signup.html" class="btn btn-sm">注册</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</nav>
+
+<div class="container mb-3"><span class="badge badge-pill badge-light">aaa &times;</span> > name</div>
+
+<div class="bg-light py-3">
+	<div class="container bg-white p-5">
+		<div class="row no-gutters">
+            <!-- 左侧图库 -->
+			<div class="col-12 col-lg-5">
+				<div class="row">
+					<img src="http://placehold.it/600x300" class="img-fluid" />
+				</div>
+				<div class="row mt-3">
+					<div id="slider2" class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="http://placehold.it/360x180" class="img-fluid" />
+							</div>
+							<div class="swiper-slide">
+								<img src="http://placehold.it/360x180" class="img-fluid" />
+							</div>
+							<div class="swiper-slide">
+								<img src="http://placehold.it/360x180" class="img-fluid" />
+							</div>
+							<div class="swiper-slide">
+								<img src="http://placehold.it/360x180" class="img-fluid" />
+							</div>
+							<div class="swiper-slide">
+								<img src="http://placehold.it/360x180" class="img-fluid" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+            <!-- 右侧信息 -->
+			<div class="col-12 col-lg-7 px-5">
+				<h2><%=supplier.supplier_name%></h2>
+				<p class="mb-5">销量123，供345件产品</p>
+				<address><i class="fas fa-map-marker-alt"></i> 商家地址：<%=supplier.address%></address>
+				<p><i class="far fa-clock"></i> 营业时间：</p>
+				<button class="btn btn-lg btn-warning text-white">我要下单</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="container bg-white my-5 py-3">
+		<div class="row">
+			<div class="col-12">
+				<span class="msTab active">推荐商品</span>
+				<span class="msTab">案例展示</span>
+				<span class="msTab">联系我们</span>
+			</div>
+		</div>
+		<hr />
+		<!-- 建材 -->
+		<div class="row my-3">
+			<div class="col-12">
+				<button class="btn btn-secondary">
+						推荐商品
+				</button>
+			</div>
+		</div>
+		<div class="row mb-5">
+			
+			<div class="col-12 col-lg-3">
+					<a href="./detail.html" class="toMaterial">
+						<img src="http://placehold.it/500x300" class="img-fluid" />
+						<h4 class="text-black">法式10件套</h4>
+						<div>
+							<span class="text-gray font-12">市场参考价：<del>aaaaaa</del></span><br />
+							<span class="text-danger font-12">会员优惠价：bbbbb</span>
+						</div>
+					</a>
+			</div>
+			
+		</div>
+
+		<!-- 案例 -->
+		<div class="row my-3">
+			<div class="col-12">
+				<button class="btn btn-secondary">
+					案例展示
+				</button>
+			</div>
+		</div>
+		<div class="row mb-5">
+			<div class="col-12 col-lg-3">
+				<a href="./detail.html" class="toMaterial">
+					<img src="http://placehold.it/500x300" class="img-fluid" />
+					<h5>aaaaa bbbb</h5>
+				</a>
+			</div>
+			<div class="col-12 col-lg-3">
+				<a href="./detail.html" class="toMaterial">
+					<img src="http://placehold.it/500x300" class="img-fluid" />
+					<h5>aaaaa bbbb</h5>
+				</a>
+			</div>
+			<div class="col-12 col-lg-3">
+				<a href="./detail.html" class="toMaterial">
+					<img src="http://placehold.it/500x300" class="img-fluid" />
+					<h5>aaaaa bbbb</h5>
+				</a>
+			</div>
+        </div>
+        
+        <!-- 联系 -->
+        <div class="row my-3">
+                <div class="col-12">
+                    <button class="btn btn-secondary">
+						联系我们
+                    </button>
+                </div>
+                <div class="col-12 my-3">
+                        <button class="d-block mb-2 btn btn-danger">
+                                afsfa
+                            </button>
+                        <button class="btn btn-danger">
+                                afsfa
+                            </button>
+                </div>
+            </div>
+	</div>
+</div>
+
+
+		
+		<div class="container my-5">
+			<div class="page-foot m-3">
+				<div class="row justify-content-center">
+					<div class="col-6 col-md-4 col-lg-2 border border-top-0 border-bottom-0 border-left-0">
+						<b>关于巧客</b>
+						<ul class="p-3">
+							<li><a href="#">巧客新闻</a></li>
+							<li><a href="#">巧客网责任</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-4 col-lg-2 border border-top-0 border-bottom-0 border-left-0">
+						<b>加入巧客网</b>
+						<ul class="p-3">
+							<li><a href="#">巧客网活动</a></li>
+							<li><a href="#">巧客网用户</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-4 col-lg-2 border border-top-0 border-bottom-0 border-left-0">
+						<b>帮助中心</b>
+						<ul class="p-3">
+							<li><a href="#">常见问题</a></li>
+							<li><a href="#">联系我们</a></li>
+							<li><a href="#">在线留言</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-4 col-lg-2 border border-top-0 border-bottom-0 border-left-0">
+						<b>法律法规</b>
+						<ul class="p-3">
+							<li><a href="#">免责条款</a></li>
+							<li><a href="#">用户协议</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-4 col-lg-2">
+						<b>展会指南</b>
+						<ul class="p-3">
+							<li><a href="#">家居展览</a></li>
+							<li><a href="#">设计沙龙</a></li>
+							<li><a href="#">商家活动</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- QR_code -->
+		<div class="text-center mb-5">
+			<img src="/assets/img/qr.jpg?__=007e940" alt="" />
+		</div>
+		
+
+		<script src="userState.js.ashx"></script>
+		<script src="/assets/js/jquery-3.4.0.min.js?__=1556961448738"></script>
+		<script src="/assets/js/bootstrap.min.js?__=1556961448738"></script>
+
+		<script src="/assets/js/swiper.min.js?__=1556961448738"></script>
+<script>
+	new Swiper('#slider2', {
+		slidesPerView: 5,
+		spaceBetween: 10,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 30
+			},
+			640: {
+				slidesPerView: 2,
+				spaceBetween: 20
+			},
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 10
+			}
+		}
+	});
+
+
+		$('#pageHeaderSearchForm').on('click' , 'button' , function(){
+			location.assign(this.getAttribute('data-href'));
+		});
+		$('#btnSearch').click(function (){
+			var kw = $('#site_search_k').val();
+			location.href='/cases/index.html?building_kw='+kw ;
+		});
+		</script>
+	<script type="text/javascript" charset="utf-8" src="http://192.168.1.6:8132/livereload.js"></script></body>
+</html>

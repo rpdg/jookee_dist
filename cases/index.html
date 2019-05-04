@@ -1,0 +1,526 @@
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" />
+		
+		<title>巧客网</title>
+		
+
+		    <link rel="stylesheet" href="/assets/css/fontawesome.css?__=1556961448738" />
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?__=1556961448738" />
+    <link rel="stylesheet" href="/assets/css/app.css?__=674f9a6" />
+    <link rel="stylesheet" href="/assets/css/swiper.min.css?__=1556961448738" />
+    <style>
+	.spQ {
+		display: inline-block;
+		/* width: 100px; */
+		text-align: center;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		cursor: pointer;
+		padding: 2px 1em;
+	}
+	.spQ.current {
+		color: #f29700;
+		font-weight: bold;
+	}
+
+	.caseLink {
+		color: #333;
+	}
+	.caseLink:hover {
+		color: #666;
+		/* color:#fd7e14;
+        text-decoration: none; */
+	}
+
+	.lunchbox {
+		position: relative;
+	}
+
+	@media (min-width: 37.5em) {
+		.lunchbox {
+			margin-left: auto;
+			margin-right: auto;
+			width: 92%;
+
+			/* make room for arrows */
+			padding-left: 3em;
+			padding-right: 3em;
+		}
+	}
+
+	@media (min-width: 43.75em) {
+		.lunchbox {
+			width: 99%;
+		}
+	}
+
+	.swiper-button-prev,
+	.swiper-button-next {
+		display: none;
+		margin-top: -3rem;
+	}
+	@media (min-width: 37.5em) {
+		.swiper-button-prev,
+		.swiper-button-next {
+			/* show on larger viewports */
+			display: block;
+		}
+	}
+	.swiper-container {
+		width: 100%;
+		height: 100%;
+	}
+	.swiper-slide {
+		overflow: hidden;
+		text-align: center;
+		font-size: 18px;
+		background: #fff;
+
+		/* Center slide text vertically */
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		-webkit-justify-content: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
+		align-items: center;
+	}
+</style>
+		
+		
+	</head>
+	<body>
+		<!-- header -->
+		<nav id="mainNav" class="container navbar navbar-expand-lg navbar-light mb-3">
+			<a class="navbar-brand" href="/"><img src="/assets/img/logo_jookee.png?__=33beefb"/></a>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="/">首页</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="/companies/index.html">装修公司</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="/decoration/index.html">软装设计</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="/cases/index.html">经典案例</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="/materials/index.html">会员特惠建材</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="/user/vip.html">会员服务</a>
+					</li>
+				</ul>
+				<form id="pageHeaderSearchForm" class="form-inline my-2 my-lg-0">
+					<div class="input-group">
+						<input id="site_search_k" type="text" class="form-control" placeholder="输入小区名" />
+						<div class="input-group-append">
+							<span id="btnSearch" class="input-group-text">
+								<i class="fas fa-search"></i>
+							</span>
+						</div>
+						<div id="userState" class="btn-group ml-2">
+							<button type="button" data-href="/user/signin.html" class="btn btn-sm btn-secondary">登录</button>
+							<button type="button" data-href="/user/signup.html" class="btn btn-sm">注册</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</nav>
+
+
+<div class="container">
+	<table id="tbSearch" class="tbSearch font-12 ">
+		<colgroup>
+			<col style="width:100px;" />
+		</colgroup>
+		<tr></tr>
+		<tr>
+			<td colspan="2" class="pl-3">
+				<span class="badge border font-12 "><%=Request["building_kw"]%> &times;</span>
+
+				<span class="text-gray">> 共搜索到<%=count%>条结果</span>	
+			</td>
+		</tr>
+		<tr>
+			<td class="bg-light text-center">类型</td>
+			<td>
+				
+					<span class="spQ">aaa</span>
+					<span class="spQ current">aaa</span>
+					<span class="spQ">aaa</span>
+				
+				
+			</td>
+		</tr>
+		<tr>
+			<td class="bg-light text-center">户型</td>
+			<td>
+				
+					<span class="spQ current">aaa</span>
+					<span class="spQ">aaa</span>
+					<span class="spQ">aaa</span>
+				
+			</td>
+		</tr>
+		<tr>
+			<td class="bg-light text-center">服务区域</td>
+			<td>
+				<span class="spQ">aaa</span>
+				<span class="spQ">aaa</span>
+				<span class="spQ current">aaa</span>
+			</td>
+		</tr>
+		<tr>
+			<td class="bg-light text-center">承接价位</td>
+			<td>
+				<span class="spQ">aaa</span>
+				<span class="spQ">aaa</span>
+				<span class="spQ">aaa</span>
+				<span class="spQ current">aaa</span>
+				<span class="spQ">aaa</span>
+			</td>
+		</tr>
+		<tr>
+			<td class="bg-light text-center">专长风格</td>
+			<td>
+				
+					<span class="spQ">aaa</span>
+					<span class="spQ current">aaa</span>
+					<span class="spQ">aaa</span>
+					<span class="spQ">aaa</span>
+					<span class="spQ">aaa</span>
+					<span class="spQ">aaa</span>
+				
+				
+			</td>
+		</tr>
+	</table>
+</div>
+
+<!-- 热门新房案例 -->
+<div class="container my-5 text-center">
+	<img src="/assets/img/case-x01.png?__=e1c5182" class="img-fluid" />
+	<div class="lunchbox pb-5">
+		<div id="slider1" class="swiper-container my-3">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<a class="caseLink" href="detail.html">
+						<img src="http://placehold.it/360x240" class="img-fluid" />
+						<div class="text-left text-nowrap font-weight-bold font-14">aaaaa bbbb</div>
+						<div class="text-left text-nowrap font-12">aaa / bbb / ccc / ddd</div>
+					</a>
+				</div>
+
+				<div class="swiper-slide">
+					<a class="caseLink" href="detail.html">
+						<img src="http://placehold.it/360x240" class="img-fluid" />
+						<div class="text-left text-nowrap font-weight-bold font-14">aaaaa bbbb</div>
+						<div class="text-left text-nowrap font-12">aaa / bbb / ccc / ddd</div>
+					</a>
+				</div>
+
+				<div class="swiper-slide">
+					<a class="caseLink" href="detail.html">
+						<img src="http://placehold.it/360x240" class="img-fluid" />
+						<div class="text-left text-nowrap font-weight-bold font-14">aaaaa bbbb</div>
+						<div class="text-left text-nowrap font-12">aaa / bbb / ccc / ddd</div>
+					</a>
+				</div>
+
+				<div class="swiper-slide">
+					<a class="caseLink" href="detail.html">
+						<img src="http://placehold.it/360x240" class="img-fluid" />
+						<div class="text-left text-nowrap font-weight-bold font-14">aaaaa bbbb</div>
+						<div class="text-left text-nowrap font-12">aaa / bbb / ccc / ddd</div>
+					</a>
+				</div>
+
+				<div class="swiper-slide">
+					<a class="caseLink" href="detail.html">
+						<img src="http://placehold.it/360x240" class="img-fluid" />
+						<div class="text-left text-nowrap font-weight-bold font-14">aaaaa bbbb</div>
+						<div class="text-left text-nowrap font-12">aaa / bbb / ccc / ddd</div>
+					</a>
+				</div>
+
+				<div class="swiper-slide">
+					<a class="caseLink" href="detail.html">
+						<img src="http://placehold.it/360x240" class="img-fluid" />
+						<div class="text-left text-nowrap font-weight-bold font-14">aaaaa bbbb</div>
+						<div class="text-left text-nowrap font-12">aaa / bbb / ccc / ddd</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- Add Arrows -->
+		<div id="slider1_next" class="swiper-button-next"></div>
+		<div id="slider1_prev" class="swiper-button-prev"></div>
+	</div>
+</div>
+
+<!-- 二手房案例 -->
+<div class="container my-5 text-center">
+	<img src="/assets/img/case-x02.png?__=1a09181" class="img-fluid" />
+
+	<div class="lunchbox pb-5">
+		<div id="slider2" class="swiper-container my-3">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<a class="caseLink" href="detail.html">
+						<img src="http://placehold.it/360x240" class="img-fluid" />
+						<div class="text-left text-nowrap font-weight-bold font-14">aaaaa bbbb</div>
+						<div class="text-left text-nowrap font-12">aaa / bbb / ccc / ddd</div>
+					</a>
+				</div>
+
+				<div class="swiper-slide">
+					<a class="caseLink" href="detail.html">
+						<img src="http://placehold.it/360x240" class="img-fluid" />
+						<div class="text-left text-nowrap font-weight-bold font-14">aaaaa bbbb</div>
+						<div class="text-left text-nowrap font-12">aaa / bbb / ccc / ddd</div>
+					</a>
+				</div>
+
+				<div class="swiper-slide">
+					<a class="caseLink" href="detail.html">
+						<img src="http://placehold.it/360x240" class="img-fluid" />
+						<div class="text-left text-nowrap font-weight-bold font-14">aaaaa bbbb</div>
+						<div class="text-left text-nowrap font-12">aaa / bbb / ccc / ddd</div>
+					</a>
+				</div>
+
+				<div class="swiper-slide">
+					<a class="caseLink" href="detail.html">
+						<img src="http://placehold.it/360x240" class="img-fluid" />
+						<div class="text-left text-nowrap font-weight-bold font-14">aaaaa bbbb</div>
+						<div class="text-left text-nowrap font-12">aaa / bbb / ccc / ddd</div>
+					</a>
+				</div>
+
+				<div class="swiper-slide">
+					<a class="caseLink" href="detail.html">
+						<img src="http://placehold.it/360x240" class="img-fluid" />
+						<div class="text-left text-nowrap font-weight-bold font-14">aaaaa bbbb</div>
+						<div class="text-left text-nowrap font-12">aaa / bbb / ccc / ddd</div>
+					</a>
+				</div>
+
+				<div class="swiper-slide">
+					<a class="caseLink" href="detail.html">
+						<img src="http://placehold.it/360x240" class="img-fluid" />
+						<div class="text-left text-nowrap font-weight-bold font-14">aaaaa bbbb</div>
+						<div class="text-left text-nowrap font-12">aaa / bbb / ccc / ddd</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- Add Arrows -->
+		<div id="slider2_next" class="swiper-button-next"></div>
+		<div id="slider2_prev" class="swiper-button-prev"></div>
+	</div>
+</div>
+
+<!-- 案例 -->
+<div class="container my-5 text-center">
+	<img src="/assets/img/case-x03.png?__=c683502" class="img-fluid" />
+
+
+	<div class="row my-5">
+		
+			<a class="col-12 col-lg-4 mb-5 caseLink" href="detail.html">
+				<img src="http://placehold.it/360x240" class="img-fluid" />
+				<div class="text-left text-nowrap font-weight-bold font-14">aaaaa bbbb</div>
+				<div class="text-left text-nowrap font-12">aaa / bbb / ccc / ddd</div>
+			</a>
+			<a class="col-12 col-lg-4 mb-5 caseLink" href="detail.html">
+				<img src="http://placehold.it/360x240" class="img-fluid" />
+				<div class="text-left text-nowrap font-weight-bold font-14">aaaaa bbbb</div>
+				<div class="text-left text-nowrap font-12">aaa / bbb / ccc / ddd</div>
+			</a>
+			<a class="col-12 col-lg-4 mb-5 caseLink" href="detail.html">
+				<img src="http://placehold.it/360x240" class="img-fluid" />
+				<div class="text-left text-nowrap font-weight-bold font-14">aaaaa bbbb</div>
+				<div class="text-left text-nowrap font-12">aaa / bbb / ccc / ddd</div>
+			</a>
+		
+		
+	</div>
+
+	
+	
+		<div class="row">
+			<div class="col-12">
+				<ul class="pagination justify-content-center flex-wrap">
+					<li class="page-item"><a class="page-link" href="#">Previous</a></li>
+					<li class="page-item"><a class="page-link" href="#">1</a></li>
+					<li class="page-item active"><a class="page-link" href="#">2</a></li>
+					<li class="page-item"><a class="page-link" href="#">3</a></li>
+					<li class="page-item"><a class="page-link" href="#">4</a></li>
+					<li class="page-item"><a class="page-link" href="#">5</a></li>
+					<li class="page-item"><a class="page-link" href="#">6</a></li>
+					<li class="page-item"><a class="page-link" href="#">Next</a></li>
+				</ul>
+			</div>
+		</div>
+		
+	
+</div>
+
+
+
+		
+		<div class="container my-5">
+			<div class="page-foot m-3">
+				<div class="row justify-content-center">
+					<div class="col-6 col-md-4 col-lg-2 border border-top-0 border-bottom-0 border-left-0">
+						<b>关于巧客</b>
+						<ul class="p-3">
+							<li><a href="#">巧客新闻</a></li>
+							<li><a href="#">巧客网责任</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-4 col-lg-2 border border-top-0 border-bottom-0 border-left-0">
+						<b>加入巧客网</b>
+						<ul class="p-3">
+							<li><a href="#">巧客网活动</a></li>
+							<li><a href="#">巧客网用户</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-4 col-lg-2 border border-top-0 border-bottom-0 border-left-0">
+						<b>帮助中心</b>
+						<ul class="p-3">
+							<li><a href="#">常见问题</a></li>
+							<li><a href="#">联系我们</a></li>
+							<li><a href="#">在线留言</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-4 col-lg-2 border border-top-0 border-bottom-0 border-left-0">
+						<b>法律法规</b>
+						<ul class="p-3">
+							<li><a href="#">免责条款</a></li>
+							<li><a href="#">用户协议</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-4 col-lg-2">
+						<b>展会指南</b>
+						<ul class="p-3">
+							<li><a href="#">家居展览</a></li>
+							<li><a href="#">设计沙龙</a></li>
+							<li><a href="#">商家活动</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- QR_code -->
+		<div class="text-center mb-5">
+			<img src="/assets/img/qr.jpg?__=007e940" alt="" />
+		</div>
+		
+
+		<script src="userState.js.ashx"></script>
+		<script src="/assets/js/jquery-3.4.0.min.js?__=1556961448738"></script>
+		<script src="/assets/js/bootstrap.min.js?__=1556961448738"></script>
+
+		<script src="/assets/js/swiper.min.js?__=1556961448738"></script>
+<script>
+	var swiper1 = new Swiper('#slider1', {
+		slidesPerView: 4,
+		spaceBetween: 20,
+		navigation: {
+			nextEl: '#slider1_next',
+			prevEl: '#slider1_prev'
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 30
+			},
+			640: {
+				slidesPerView: 2,
+				spaceBetween: 20
+			},
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 10
+			}
+		}
+	});
+
+	var swiper2 = new Swiper('#slider2', {
+		slidesPerView: 4,
+		spaceBetween: 20,
+		navigation: {
+			nextEl: '#slider2_next',
+			prevEl: '#slider2_prev'
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 30
+			},
+			640: {
+				slidesPerView: 2,
+				spaceBetween: 20
+			},
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 10
+			}
+		}
+	});
+
+
+		var p_ht = '<%=Request["ht"]%>';
+		var p_rs = '<%=Request["rs"]%>';
+		var p_dst = '<%=Request["dst"]%>';
+		var url = 'index.aspx?building_kw=<%=Request["building_kw"]%>' ;
+		$('#tbSearch').on('click' , '.spQ', function(){
+			var t = $(this) , p = t.data('p') ; id = t.data('did') ;
+			switch (p){
+				case 'rs':
+					url += '&rs=' + id + '&dst=' + p_dst + '&ht=' + p_ht;
+					break;
+				case 'dst':
+					url += '&rs=' + p_rs + '&dst=' + id + '&ht=' + p_ht;
+					break;
+				case 'ht':
+					url += '&rs=' + p_rs + '&dst=' + p_dst + '&ht=' + id;
+					break;
+			}
+			location.href = url ;
+		}) ;
+	
+
+		$('#pageHeaderSearchForm').on('click' , 'button' , function(){
+			location.assign(this.getAttribute('data-href'));
+		});
+		$('#btnSearch').click(function (){
+			var kw = $('#site_search_k').val();
+			location.href='/cases/index.html?building_kw='+kw ;
+		});
+		</script>
+	<script type="text/javascript" charset="utf-8" src="http://192.168.1.6:8132/livereload.js"></script></body>
+</html>

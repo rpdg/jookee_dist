@@ -1,0 +1,264 @@
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" />
+		
+		<title>巧客网</title>
+		
+
+		    <link rel="stylesheet" href="/assets/css/fontawesome.css?__=1556961448738" />
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?__=1556961448738" />
+    <link rel="stylesheet" href="/assets/css/app.css?__=674f9a6" />
+    <style>
+	#divMain {
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		background-image: url('/assets/img/bg-reg.jpg?__=daa0bef');
+		height: 500px;
+	}
+
+	#regForm {
+		background-color: #a8a8ab;
+	}
+</style>
+		
+		
+	</head>
+	<body>
+		<!-- header -->
+		<nav id="mainNav" class="container navbar navbar-expand-lg navbar-light mb-3">
+			<a class="navbar-brand" href="/"><img src="/assets/img/logo_jookee.png?__=33beefb"/></a>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="/">首页</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="/companies/index.html">装修公司</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="/decoration/index.html">软装设计</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="/cases/index.html">经典案例</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="/materials/index.html">会员特惠建材</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="/user/vip.html">会员服务</a>
+					</li>
+				</ul>
+				<form id="pageHeaderSearchForm" class="form-inline my-2 my-lg-0">
+					<div class="input-group">
+						<input id="site_search_k" type="text" class="form-control" placeholder="输入小区名" />
+						<div class="input-group-append">
+							<span id="btnSearch" class="input-group-text">
+								<i class="fas fa-search"></i>
+							</span>
+						</div>
+						<div id="userState" class="btn-group ml-2">
+							<button type="button" data-href="/user/signin.html" class="btn btn-sm btn-secondary">登录</button>
+							<button type="button" data-href="/user/signup.html" class="btn btn-sm">注册</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</nav>
+
+		
+
+
+<div id="divMain">
+	<div class="container">
+		<div class="row py-5 justify-content-end">
+			<div class="col-12 col-lg-4 float-right">
+				<form id="regForm" class="p-4">
+					<div class="form-row">
+						<div class="input-group mb-2">
+							<div class="input-group-prepend">
+								<div class="input-group-text">用户名</div>
+							</div>
+							<input
+								type="text"
+								class="form-control"
+								id="user_name"
+								name="user_name"
+								maxlength="20"
+								required
+								pattern="^[a-zA-Z][a-zA-Z0-9_]{5,19}$"
+							/>
+						</div>
+						<div class="input-group mb-2">
+							<div class="input-group-prepend">
+								<div class="input-group-text">手　机</div>
+							</div>
+							<input
+								type="text"
+								class="form-control"
+								id="mobile"
+								name="mobile"
+								maxlength="11"
+								required
+								pattern="^1[3|4|5|7|8][0-9]{9}$"
+							/>
+						</div>
+						<div class="input-group mb-2">
+							<div class="input-group-prepend">
+								<div class="input-group-text">密　码</div>
+							</div>
+							<input
+								type="password"
+								class="form-control"
+								id="password"
+								name="password"
+								minlength="6"
+								maxlength="20"
+								required
+							/>
+						</div>
+						<div class="input-group mb-2">
+							<div class="input-group-prepend">
+								<div class="input-group-text">站　点</div>
+							</div>
+							<select class="form-control" id="site_id" name="site_id">
+								<option value="1">上海</option>
+							</select>
+						</div>
+						<div class="input-group mb-2">
+							<div class="input-group-prepend">
+								<div class="input-group-text">验证码</div>
+							</div>
+							<input
+								type="text"
+								class="form-control"
+								placeholder="6位数字验证码"
+								id="verifycode"
+								name="verifycode"
+								minlength="6"
+								maxlength="6"
+								required
+								pattern="^[0-9]{6}$"
+							/>
+						</div>
+						<div class="input-group mb-2">
+							<span id="btnGetCode" class="form-control btn btn-secondary px-5 text-white"
+								>获取验证码</span
+							>
+						</div>
+						<div class="input-group mb-2">
+							<button type="submit" class="form-control btn btn-warning px-5 text-white">立即注册</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		
+
+		<script src="userState.js.ashx"></script>
+		<script src="/assets/js/jquery-3.4.0.min.js?__=1556961448738"></script>
+		<script src="/assets/js/bootstrap.min.js?__=1556961448738"></script>
+
+		<script>
+	function success(new_user) {
+		if (fy.request['returnUrl']) {
+			window.location.href = decodeURIComponent(fy.request['returnUrl']) + '&returnAction=Insert';
+		} else {
+			$('#userState').html('欢迎，<a href="/qka/admin.aspx" target="_blank">' + new_user.user_name + '</a>');
+			window.open('/qka/admin.aspx');
+			location.href = 'index.aspx';
+		}
+	}
+
+	if (window.user) success();
+
+	var form = document.getElementById('regForm');
+
+	form.addEventListener(
+		'submit',
+		function(event) {
+			event.preventDefault();
+			event.stopPropagation();
+
+			if (form.checkValidity()) {
+				var obj = {
+					user_name: $('#user_name').val(),
+					mobile: $('#mobile').val(),
+					password: $('#password').val(),
+					site_id: $('#site_id').val(),
+					verifycode: $('#verifycode').val()
+				};
+
+				$.ajax({
+					type: 'POST',
+					url: '/signUpUser.ashx',
+					data: {
+						vo: JSON.stringify(obj)
+					},
+					dataType: 'json',
+					timeout: 6e4,
+					success: function(json) {
+						if (json.data) {
+							success(obj);
+						} else {
+							alert('您的用户名可能已被别人注册；或您输入的验证码不正确');
+						}
+					}
+				});
+			}
+		},
+		false
+	);
+
+	$('#btnGetCode').click(function() {
+		let mobInput = document.getElementById('mobile');
+		if (mobInput.checkValidity()) {
+			$.ajax({
+				type: 'POST',
+				url: '/vip.ashx?action=sendverifycode',
+				data: {
+					mob: mobInput.value
+				},
+				dataType: 'json',
+				timeout: 6e4,
+				success: function(json) {
+					if (json.status == 'success') {
+						alert('短信已发送，请注意查收！');
+					} else {
+						alert('短信发送失败，请检查手机号。');
+					}
+				}
+			});
+		} else {
+			setTimeout(function() {
+				mobInput.focus();
+			}, 50);
+		}
+	});
+
+
+		$('#pageHeaderSearchForm').on('click' , 'button' , function(){
+			location.assign(this.getAttribute('data-href'));
+		});
+		$('#btnSearch').click(function (){
+			var kw = $('#site_search_k').val();
+			location.href='/cases/index.html?building_kw='+kw ;
+		});
+		</script>
+	<script type="text/javascript" charset="utf-8" src="http://192.168.1.6:8132/livereload.js"></script></body>
+</html>

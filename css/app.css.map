@@ -1,0 +1,16 @@
+{
+    "version": 3,
+    "file": "app.css?__=1555934962168",
+    "sources": [
+        "/css/app.scss",
+        "/css/module/_vars.scss",
+        "/css/module/_comm.scss"
+    ],
+    "sourcesContent": [
+        "@import \"./module/vars\";\r\n@import \"./module/comm\";\r\n\r\nhtml,body{\r\n    font-size:14px;\r\n}\r\n.wrapper{\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    \r\n    \r\n    @media (min-width: $breakpoint-lg) {\r\n\t\tmax-width: $lg-page-width;\r\n\t}\r\n    /* @media (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl){\r\n        background-color: $pink;\r\n\t\tmax-width: $lg-page-width;\r\n\t} */\r\n    @media (min-width: $breakpoint-xs) and (max-width: $breakpoint-lg){\r\n\t\tmax-width: $md-page-width;\r\n\t}\r\n}\r\n.tr {\r\n    display: table-row;\r\n}\r\n.td {\r\n    display: table-cell;\r\n    padding: 5px;\r\n    border: 1px solid #ddd;\r\n    border-collapse: collapse;\r\n}\r\n.subTitle{\r\n    position: relative;\r\n    margin-top: -2.5em;\r\n    line-height: 2.5em;\r\n    background-color: rgba(255, 255, 255, .7);\r\n    color: $black;\r\n}\r\n\r\na {\r\n    // color: $dark;\r\n}\r\na:hover{\r\n    // color:$secondary;\r\n}",
+        "$xl-page-width: 1460px;\r\n$lg-page-width: 1220px;\r\n$md-page-width: 100vw;\r\n\r\n$breakpoint-xs: 0;\r\n$breakpoint-sm: 576px;\r\n$breakpoint-md: 768px;\r\n$breakpoint-lg: 992px;\r\n$breakpoint-xl: 1460px;\r\n\r\n$black: #222;\r\n$blue: #007bff;\r\n$indigo: #6610f2;\r\n$purple: #6f42c1;\r\n$pink: #e83e8c;\r\n$red: #dc3545;\r\n$orange: #fd7e14;\r\n$yellow: #ffc107;\r\n$green: #28a745;\r\n$teal: #20c997;\r\n$cyan: #17a2b8;\r\n$white: #fff;\r\n$gray: #6c757d;\r\n$gray-dark: #343a40;\r\n\r\n\r\n$primary: #007bff;\r\n$secondary: #54656d;\r\n\r\n\r\n$success: #28a745;\r\n$info: #17a2b8;\r\n$warning: #ffc107;\r\n$danger: #dc3545;\r\n\r\n\r\n$light: #f8f9fa;\r\n$dark: #343a40;\r\n",
+        ""
+    ],
+    "names": [],
+    "mappings": "AAGA,AAAA,IAAI,EAAC,IAAI,CAAA,EACL,SAAS,EAAC,IAAI,GACjB;;AACD,AAAA,QAAQ,CAAA,EACJ,WAAW,EAAE,IAAI,EACjB,YAAY,EAAE,IAAI,EAMlB,+HAGC,EAIJ;;AAVG,MAAM,EAAE,SAAS,EAAE,KAAK,IAL5B,AAAA,QAAQ,CAAA,EAMN,SAAS,ECXK,MAAM,GDoBrB;;AAHG,MAAM,EAAE,SAAS,EAAE,CAAC,OAAO,SAAS,EAAE,KAAK,IAZ/C,AAAA,QAAQ,CAAA,EAaN,SAAS,ECjBK,KAAK,GDmBpB;;AACD,AAAA,GAAG,CAAC,EACA,OAAO,EAAE,SAAS,GACrB;;AACD,AAAA,GAAG,CAAC,EACA,OAAO,EAAE,UAAU,EACnB,OAAO,EAAE,GAAG,EACZ,MAAM,EAAE,cAAc,EACtB,eAAe,EAAE,QAAQ,GAC5B;;AACD,AAAA,SAAS,CAAA,EACL,QAAQ,EAAE,QAAQ,EAClB,UAAU,EAAE,MAAM,EAClB,WAAW,EAAE,KAAK,EAClB,gBAAgB,EAAE,wBAAuB,EACzC,KAAK,EC1BD,IAAI,GD2BX"
+}
